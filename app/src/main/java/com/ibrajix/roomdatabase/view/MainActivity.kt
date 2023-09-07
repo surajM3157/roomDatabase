@@ -110,37 +110,17 @@ class MainActivity : AppCompatActivity() {
         binding.etNumber.addTextChangedListener(watcher)
 
     }
-
-    /**
-     * Handle click of save button
-     */
     private fun handleClick(){
-
-        //on click of button save
         binding.btnSave.setOnClickListener {
-
-            //get details entered
             val name = binding.etName.text.toString()
-            val age = binding.etAge.text.toString()
+            val password = binding.etAge.text.toString()
             val number = binding.etNumber.text.toString()
-
-
-            val user = User(id = 1, name = name, age = age, number = number)
-
-            //save the details to room database
+            val user = User(id = 1, name = name, age = password, number = number)
             userViewModel.insertUserDetails(user)
-
             userViewModel.response.observe(this){
-
                 Toast.makeText(this, it.toString(), Toast.LENGTH_LONG).show()
-
-                //success, save key so on next visit user goes to details screen
                 dataStoreViewModel.setSavedKey(true)
-
-                //show toast message
                 Toast.makeText(this, applicationContext.getString(R.string.record_saved), Toast.LENGTH_LONG).show()
-
-                //go to next activity
                 val intent = Intent(this, UserDetailsActivity::class.java)
                 startActivity(intent)
 

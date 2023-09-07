@@ -39,6 +39,7 @@ class loginActivity : AppCompatActivity() {
 
             // Check conditions for username and password
             if (isValidUsername(username) && isValidPassword(password)) {
+
                 val intent = Intent(this, UserDetailsActivity::class.java)
                 startActivity(intent)
             } else {
