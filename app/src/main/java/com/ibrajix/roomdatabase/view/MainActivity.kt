@@ -110,6 +110,7 @@ class MainActivity : AppCompatActivity() {
         binding.etNumber.addTextChangedListener(watcher)
 
     }
+
     private fun handleClick(){
         binding.btnSave.setOnClickListener {
             val name = binding.etName.text.toString()
