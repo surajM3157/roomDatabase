@@ -5,6 +5,7 @@
     <string name="number">Number</string>
     <string name="age">Password</string>
     <string name="save">Save</string>
+    <string name="login">Login</string>
     <string name="hello_there">Hello there,</string>
     <string name="here_are_your_details">Here are your details</string>
     <string name="record_saved">Record saved successfully</string>
